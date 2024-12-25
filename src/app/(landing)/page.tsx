@@ -1,7 +1,7 @@
-import { Heading } from "./components/heading";
-import { MaxWidthWrapper } from "./components/max-width-wrapper";
+import { Heading } from "@/components/heading";
+import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { Flag } from "lucide-react";
-import { MonzaButton } from "./components/monza-button";
+import { MonzaButton } from "@/components/monza-button";
 
 const Page = () => {
   return (
