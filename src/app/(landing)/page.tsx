@@ -2,6 +2,9 @@ import { Heading } from "@/components/heading";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { Flag } from "lucide-react";
 import { MonzaButton } from "@/components/monza-button";
+import { MockDiscordUI } from "@/components/mock-discord-ui";
+import { DiscordMessage } from "@/components/discord-message";
+import { AnimatedList, AnimatedListItem } from "@/components/ui/animated-list"
 
 const Page = () => {
   return (
@@ -38,15 +41,70 @@ const Page = () => {
               ))}
             </ul>
             <div className="w-full max-w-80 ">
-              <MonzaButton href='/sign-up'
-              className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl">
+              <MonzaButton
+                href="/sign-up"
+                className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl"
+              >
                 Start For Free Today!
               </MonzaButton>
             </div>
           </div>
         </MaxWidthWrapper>
       </section>
-      <section></section>
+      <section className="relative bg-altbrand-25 pb-4">
+        <div className="absolute inset-x-0 bottom-24 top-24 bg-altbrand-700" />
+        <div className="relative mx-auto">
+          <MaxWidthWrapper className="relative">
+            <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+              <MockDiscordUI>
+                <AnimatedList>
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.jpg"
+                    avatarAlt="Monza Avatar"
+                    username="Monza"
+                    timestamp="Today at 12:35PM"
+                    badgeText="SignUp"
+                    badgeColor="#43b581"
+                    title="👤 New Customer"
+                    content={{
+                      name: "Christopher Edwin Breaux",
+                      email: "cbreaux@gmail.com",
+                    }}
+                  />
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.jpg"
+                    avatarAlt="Monza Avatar"
+                    username="Monza"
+                    timestamp="Today at 12:35PM"
+                    badgeText="Revenue"
+                    badgeColor="#faa61a"
+                    title="💰 Payment Received"
+                    content={{
+                      amount: "$49.00",
+                      name: "Jean-Michel Basquiat",
+                      email: "jean-michel@email.com",
+                      plan: "PRO",
+                    }}
+                  />
+                  <DiscordMessage
+                    avatarSrc="/brand-asset-profile-picture.jpg"
+                    avatarAlt="Monza Avatar"
+                    username="Monza"
+                    timestamp="Today at 5:11AM"
+                    badgeText="Milestone"
+                    badgeColor="#5865f2"
+                    title="🚀 Revenue Milestone"
+                    content={{
+                      recurringRevenue: "$500,000.00 USD",
+                      growth: "+20.2%",
+                    }}
+                  />
+                </AnimatedList>
+              </MockDiscordUI>
+            </div>
+          </MaxWidthWrapper>
+        </div>
+      </section>
       <section></section>
       <section></section>
       <section></section>
