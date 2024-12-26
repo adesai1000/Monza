@@ -82,7 +82,7 @@ const Page = () => {
                     content={{
                       amount: "$49.00",
                       name: "Jean-Michel Basquiat",
-                      email: "jean-michel@email.com",
+                      email: "jean-michel@gmail.com",
                       plan: "PRO",
                     }}
                   />
